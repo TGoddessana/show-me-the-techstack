@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+
+{%block content %}
+<div class="page-wrapper bg-img-index p-t-200 p-b-120">
+    <div class="wrapper wrapper--w900">
+        <div class="card card-4">
+            <div class="card-body">
+                <ul class="tab-list">
+                    <li class="tab-list__item active">
+                        <a class="tab-list__link" href="#tab1" data-toggle="tab">subject</a>
+                    </li>
+                    <li class="tab-list__item">
+                        <a class="tab-list__link" href="#tab2" data-toggle="tab">github repository</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab1">
+                        <form method="GET" action="{{url_for('main.get_lagnuage_ratio_by_word')}}">
+                            <div class="form-input-group input-group-bigger">
+                                <label class=" search-label">subject</label>
+                                <input class="input--style-1" type="text" name="search"
+                                    placeholder="Web, Android 등 주제를 입력하세요." required="required">
+                                <i class="zmdi zmdi-search input-group-symbol"></i>
+                            </div>
+                            <button class="btn-submit" type="submit">search</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane" id="tab2">
+                        <form method="GET">
+                            <div class="form-input-group input-group-bigger">
+                                <label class="search-label">repository name</label>
+                                <input class="input--style-1" type="text" name="location"
+                                    placeholder="분석하고자 하는 Github Repository 이름을 입력하세요." required="required">
+                                <i class="zmdi zmdi-search input-group-symbol"></i>
+                            </div>
+                            <button class="btn-submit m-t-0" type="submit">search</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

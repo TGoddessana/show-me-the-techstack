@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% block title %}{{ query }} Search result{% endblock %}
+
+{% block content %}
+{{super()}}
+
+<head>
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/light-719f1193e0c0.css" />
+    <link crossorigin="anonymous" media="all" rel="stylesheet"
+        href="https://github.githubassets.com/assets/primer-cd5f115a3ed9.css" />
+
+</head>
+
+<div class="page-wrapper p-t-200 p-b-120 bg-img-result" style="text-align: center; font-family:'Hahmlet', serif;">
+    <div class="wrapper wrapper--w900 bg-search-wrapper">
+        <h1>{{ query }} 검색 결과</h1>
+        <h2>깃허브 Repository 중, 가장 높은 점유율을 차지하고 있는 언어는 {{ tech_list[0] }} 입니다.</h2>
+        {{language_graph | safe}}
+        <div style="text-align: left; background-color: rgba( 255, 255, 255, 0.7 );">
+            <h2 style="text-align: center;">관련 주제 중, 가장 유명한 Repository 들을 살펴보세요.</h2>
+            {% for repo in repo_list %}
+            {{ repo | safe}}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

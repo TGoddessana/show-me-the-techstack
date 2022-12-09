@@ -1,0 +1,13 @@
+.vercel
+instance/*
+!instance/.gitignore
+.webassets-cache
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+venv
+*.db
+*:Zone.Identifier
+.vscode
+node_modules/
