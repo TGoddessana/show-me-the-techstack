@@ -298,12 +298,12 @@ a:active {
   width: 100%;
   line-height: 60px;
   font-family: inherit;
-  background: #6c7ae0;
+  background: #d1d1ff;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   text-transform: uppercase;
-  color: #fff;
+  color: rgb(46, 34, 88);
   font-size: 18px;
   font-weight: 700;
   -webkit-transition: all 0.4s ease;
@@ -313,7 +313,7 @@ a:active {
 }
 
 .btn-submit:hover {
-  background: #5866cc;
+  background: #a0a9ed;
 }
 
 .m-t-0 {
@@ -1060,5 +1060,5 @@ input[type=number]::-webkit-outer-spin-button {
    #CARD
    ========================================================================== */
 .card-4 {
-  background: rgba(26, 53, 175, 0.8);
+  background: rgba(23, 38, 105, 0.8);
 }
